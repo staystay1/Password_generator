@@ -1,0 +1,81 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOXiLGT9hwht2yVrEFuLHMV",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/staystay1/Password_generator/blob/main/main.py\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "14lqT0Gn-pwt",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "82a55bef-b1c6-4bdb-d580-eea7e4e6bb8a"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Welcome to the PyPassword Generator!\n"
+          ]
+        }
+      ],
+      "source": [
+        "#Password Generator Project\n",
+        "import random\n",
+        "letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']\n",
+        "numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']\n",
+        "symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']\n",
+        "\n",
+        "print(\"Welcome to the PyPassword Generator!\")\n",
+        "nr_letters= int(input(\"How many letters would you like in your password?\\n\"))\n",
+        "nr_symbols = int(input(f\"How many symbols would you like?\\n\"))\n",
+        "nr_numbers = int(input(f\"How many numbers would you like?\\n\"))\n",
+        "\n",
+        "\n",
+        "lett = random.choices(letters, k = nr_letters)\n",
+        "num = random.choices(numbers, k = nr_numbers)\n",
+        "sym = random.choices(symbols, k = nr_symbols)\n",
+        "\n",
+        "password = lett + num + sym\n",
+        "random.shuffle(password)\n",
+        "password = \"\".join(password)\n",
+        "print(\"\\n\" \"Your password is: \" + password)\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "VisC0_ClY9Aj"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
